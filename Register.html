@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="register_style.css">
+    <title>Register</title>
+</head>
+<body>
+ <!-- Header -->
+ <div class="container" style="border: 2px solid white;">
+     <div class="top">
+     <h1 style="text-align: center; color: wheat;" id="top1">User</h1>
+     <h1 style="text-align: center; position: absolute; top: 100px; left:550px; visibility: hidden; color: wheat;" id="top2">Organization</h1>
+     </div>
+     <div id="organback">
+     <h4 onclick="swipe1()" style="position: absolute;top: 130px;margin-left: 560px;cursor: pointer; color: wheat; " id="org1">Register as a Organization >>></h4>
+     <h4 onclick="swipe2()" style="position: absolute; top: 130px; margin-left: 560px; cursor: pointer; visibility: hidden; color: wheat;" id="org2"> <<< Back to a User Registration</h4>
+     </div>
+     <span class="line"></span>
+     <div class="inner_content">
+         <table id="table1" class="tb1" style="font-size: 20px; padding: 10px;">
+             <tr>
+                 <td>Name             :  </td>
+                 <td><input type="text" name="" id="" placeholder="Type your name..."></td>
+             </tr><tr>
+                <td>Address          :  </td>
+                <td><input type="text" name="" id="" placeholder="Address..."></td>
+            </tr><tr>
+                <td>Ph.no            :  </td>
+                <td><input type="text" name="" id="" placeholder="Phone Number..."></td>
+            </tr><tr>
+                <td>Email            :  </td>
+                <td><input type="email" name="" id="" placeholder="Email..."></td>
+            </tr><tr>
+                <td>Document Proof   :  </td>
+                <td><input type="file" name="" id="" placeholder=""></td>
+            </tr><tr>
+                <td>Password         :  </td>
+                <td><input type="text" name="" id="" placeholder="Your Password..."></td>
+            </tr><tr>
+                <td>Confirm Password :  </td>
+                <td><input type="text" name="" id="" placeholder="Retype your Password..."></td>
+            </tr>
+
+            <button type="button" id="regbtn" class="reg_btn">Register</button>
+            
+         </table>
+
+         
+
+         <table id="table2" class="tab2" style="padding: 10px;">
+            <tr>
+                <select class="form-control" name="Organization" id="org" onchange="ddlselect()" style="visibility: hidden;">
+                    <option value="" disabled selected >Select Organization</option>
+                    <option value="Municipalities" > &nbsp; Municipalities </option>
+                    <option value="Hospitals" > &nbsp; Hospitals </option>
+                    <option value="NGO" > &nbsp; NGO </option>
+                    <option value="Police Stations" > &nbsp; Police Stations </option>
+                    <option value="Colectrate" > &nbsp; Colectrate </option>
+                    <option value="Electric Board" > &nbsp; Electric Board </option>
+                </select>
+            </tr>
+            <div id="displaytxt1">
+                <tr>
+                    <td>Name             :  </td>
+                    <td><input type="text" name="" id="" placeholder="Type your name... "></td>
+                </tr>
+                <tr>
+                    <td>Branch             :  </td>
+                    <td><input type="text" name="" id="" placeholder="Type your Branch name... t1"></td>
+                </tr><tr>
+                <td>Address          :  </td>
+                <td><input type="text" name="" id="" placeholder="Address..."></td>
+                </tr><tr>
+                    <td>Ph.no            :  </td>
+                    <td><input type="text" name="" id="" placeholder="Phone Number..."></td>
+                </tr><tr>
+                    <td>Email            :  </td>
+                    <td><input type="email" name="" id="" placeholder="Email..."></td>
+                </tr><tr>
+                    <td>Document Proof   :  </td>
+                    <td><input type="file" name="" id="" placeholder=""></td>
+                </tr><tr>
+                    <td>Password         :  </td>
+                    <td><input type="text" name="" id="" placeholder="Your Password..."></td>
+                </tr><tr>
+                    <td>Confirm Password :  </td>
+                    <td><input type="text" name="" id="" placeholder="Retype your Password..."></td>
+                </tr>
+           </div>
+           <button type="button" class="reg_btn">Register</button>
+        </table>
+         
+     </div>
+ </div>
+
+ <script>
+    var w = document.getElementById("regbtn");
+    var p1 = document.getElementById("top1");
+    var q1 = document.getElementById("top2");
+    var q = document.getElementById("org2");
+    var p = document.getElementById("org1");
+    var x = document.getElementById("table1");
+    var y = document.getElementById("table2");
+    var z = document.getElementById("regbtn");
+    var a = document.getElementById("displaytxt1")
+
+    function swipe1(){
+        x.style.visibility = "hidden";
+        x.style.position = "absolute";
+        y.style.visibility = "visible";
+        w.style.visibility = "hidden";
+        p.style.visibility = "hidden";
+        q.style.visibility = "visible";
+        p1.style.visibility = "hidden";
+        q1.style.visibility = "visible";
+        
+    }
+
+    function swipe2(){
+        x.style.visibility = "visible";
+        y.style.visibility = "hidden";
+        w.style.visibility = "hidden";
+        q.style.visibility = "hidden";
+        p.style.visibility = "visible";
+        p1.style.visibility = "visible";
+        q1.style.visibility = "hidden";
+
+
+    }
+    
+    function ddlselect(){
+        // var d = document.getElementById(org);
+        // var display = d.options[this.selectedIndex].text
+        // if(display == "Municipalities"){
+        //         a.style.visibility = "hidden";
+        // }
+        alert(this.options[this.selectedIndex].text)
+    }
+</script>
+    
+</body>
+</html>

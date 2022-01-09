@@ -1,0 +1,71 @@
+body{
+    background-color: black
+}
+.container{
+    width: 800px;
+    height: 480px;
+    border: 2px solid black;
+    margin: 100px 50% 20% 220px;
+}
+
+.inner_content{
+    margin-left: 200px;
+    margin-top: 20px;
+    color: wheat;
+
+}
+input{
+    margin-top: 10px;
+    color: wheat;
+}
+.reg_btn{
+    position: absolute;
+    width: 90px;
+    color: black;
+    background-color: white;
+    box-shadow: 0 0 20px 20px 10px black;
+    border-radius:3px;
+    margin-top: 330px;
+    margin-left: 87px;
+    box-shadow: 0px 0px 5px 2px white;
+}
+.line {
+    position: absolute;
+    display: inline-block;
+    width: 800px;
+    border-top: 0.2px solid rgb(255, 255, 255);
+    margin-top: -10px;
+  }
+  .container > h4 > .swipe1 {
+      position: absolute;
+      top: 130px;
+      margin-left: 560px;
+      cursor: pointer;
+      color: wheat;
+  }
+ 
+  
+  .tab2 {
+      visibility: hidden;
+      width: 350px; 
+      padding: 10px;
+      color: wheat;
+  }
+  .tb2 > td {
+      line-height: 10px;
+  }
+  #organback > h4{
+        text-align: center;
+        animation: glow 1s ease-in-out infinite alternate;
+  }
+
+@-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 20px #e60073, 0 0 30px #e60073, 0 0 30px #e60073, 0 0 30px #e60073, 0 0 30px #e60073;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+  
